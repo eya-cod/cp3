@@ -1,0 +1,51 @@
+PROCEDURE dot_product(V1,V2:ARRAY_OF INTEGER)
+VAR
+    V1: ARRAY_OF INTEGER[3];
+    V2 : ARRAY_OF INTEGER[3];
+    PS: INTEGER:=0;
+    i : INTEGER;
+BEGIN
+    V1:=[5,3,6]
+    V2:=[2,1,4]
+    WHILE (i<V1.length) DO
+        PS:= PS + V1[i] * V2[i]
+    END_WHILE
+END
+
+ALGORITHM Ortogonalité
+VAR
+    tab : ARRAY_OF INTEGER[3];
+    i,n:INTEGER;
+    
+BEGIN
+    FOR i FROM 0 TO n-1  DO
+        Read (tab[i])
+        IF (tab[i]*tab[i+1]=0) THEN
+            dot_product(V1,V2);
+        END_IF
+    END_FOR
+END
+
+FUNCTION dot_product(V1,V2) : ARRAY_OF INTEGER
+VAR
+    PS,i:INTEGER;
+BEGIN
+    FOR i FROM 0 TO  v1.length DO
+        PS:=PS+(v1[i]*V2[i])
+    END_FOR
+    RETURN PS ;
+END
+
+ALGORITHM Ortogonalité
+VAR
+    tab : ARRAY_OF INTEGER[3];
+    i,n:INTEGER;
+    res:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO n-1  DO
+        Read (tab[i])
+        IF (tab[i]*tab[i+1]=0) THEN
+            res:=dot_product();
+        END_IF
+    END_FOR
+END
